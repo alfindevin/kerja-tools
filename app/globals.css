@@ -140,3 +140,24 @@ select:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(47,111,78,
 @media (max-width: 820px) {
   .footer-inner { align-items: flex-start; flex-direction: column; }
 }
+
+
+/* New calculators and generator */
+.result-breakdown { display: grid; gap: 8px; margin-top: 18px; }
+.result-breakdown span { display: flex; justify-content: space-between; gap: 16px; padding-top: 8px; border-top: 1px solid rgba(255,255,255,.16); font-size: .9rem; }
+.result-breakdown b { text-align: right; }
+
+textarea { width: 100%; border: 1px solid var(--line); border-radius: 14px; padding: 13px 14px; background: #fff; color: var(--ink); outline: none; resize: vertical; font: inherit; }
+textarea:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(47,111,78,.1); }
+
+.generator-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 24px; align-items: start; }
+.letter-card { background: var(--surface); border: 1px solid var(--line); border-radius: 24px; padding: 24px; box-shadow: var(--shadow); }
+.letter-card-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 16px; }
+.letter-card .result-actions { margin-top: 0; }
+.letter-card .result-actions button { color: var(--brand-dark); border-color: var(--line); background: var(--soft); }
+.letter-preview { white-space: pre-wrap; font-family: Georgia, 'Times New Roman', serif; line-height: 1.75; color: #2e3932; background: #fffdf8; border: 1px solid #ece6d8; border-radius: 16px; padding: 22px; margin: 0; min-height: 520px; overflow-wrap: anywhere; }
+
+@media (max-width: 820px) {
+  .generator-grid { grid-template-columns: 1fr; }
+  .letter-card-head { align-items: flex-start; flex-direction: column; }
+}
