@@ -76,14 +76,18 @@ export default function SeveranceCalculator() {
 
         <div className="form-row">
           <label>Faktor uang pesangon</label>
-          <span className="hint">Isi sesuai dasar/alasan PHK yang berlaku. Contoh: 0,5; 1; 2.</span>
+          <span className="hint">Masukkan hanya faktor yang sudah kamu verifikasi dari dasar PHK dan aturan yang berlaku.</span>
           <input type="number" min="0" step="0.25" value={severanceFactor} onChange={(e) => setSeveranceFactor(Number(e.target.value))} />
         </div>
 
         <div className="form-row">
           <label>Faktor UPMK</label>
-          <span className="hint">Default 1×. Ubah hanya jika dasar PHK yang relevan menentukan berbeda.</span>
+          <span className="hint">Default 1× untuk simulasi. KerjaTools tidak merekomendasikan faktor tertentu untuk kasus PHK.</span>
           <input type="number" min="0" step="0.25" value={awardFactor} onChange={(e) => setAwardFactor(Number(e.target.value))} />
+        </div>
+
+        <div className="notice">
+          Faktor PHK bukan rekomendasi KerjaTools. Setelah Putusan MK No. 168/PUU-XXI/2023, beberapa norma ketenagakerjaan juga memiliki pemaknaan baru. Jangan menganggap multiplier tertentu otomatis sah untuk semua kasus.
         </div>
 
         <div className="form-row">
@@ -93,7 +97,7 @@ export default function SeveranceCalculator() {
         </div>
 
         <div className="info">
-          Dasar Pasal 40: <strong>{result.upMonths} bulan upah</strong> untuk pesangon dan <strong>{result.upmkMonths} bulan upah</strong> untuk UPMK sebelum faktor alasan PHK diterapkan.
+          Tabel PP No. 35 Tahun 2021: <strong>{result.upMonths} bulan upah</strong> untuk komponen pesangon dan <strong>{result.upmkMonths} bulan upah</strong> untuk UPMK sebelum faktor yang kamu masukkan diterapkan.
         </div>
       </div>
 
@@ -105,7 +109,7 @@ export default function SeveranceCalculator() {
           <span>UPMK <b>{rupiah.format(result.adjustedAward)}</b></span>
           <span>Hak lain <b>{rupiah.format(Math.max(0, otherRights))}</b></span>
         </div>
-        <p>Faktor alasan PHK harus dicocokkan dengan ketentuan yang benar.</p>
+        <p>Gunakan hasil sebagai simulasi, lalu verifikasi dasar PHK dan ketentuan terbaru.</p>
         <ResultActions text={shareText} />
       </div>
     </div>
