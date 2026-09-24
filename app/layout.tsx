@@ -7,13 +7,14 @@ import { SITE_URL } from '@/lib/site';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: { default: 'KerjaTools — Tools Gratis untuk Pekerja Indonesia', template: '%s | KerjaTools' },
-  description: 'Kalkulator dan generator gratis untuk membantu pekerja Indonesia menghitung THR, kenaikan gaji, take-home pay, dan kebutuhan kerja lainnya.',
+  description: 'Kalkulator THR, lembur, prorata gaji, kenaikan gaji, take-home pay, dan panduan kerja gratis untuk pekerja Indonesia.',
   robots: { index: true, follow: true },
   openGraph: {
     title: 'KerjaTools — Tools Gratis untuk Pekerja Indonesia',
-    description: 'Hitung THR, kenaikan gaji, dan take-home pay dengan cepat.',
+    description: 'Hitung THR, lembur, prorata gaji, kenaikan gaji, dan take-home pay dengan cepat.',
     type: 'website',
-    locale: 'id_ID'
+    locale: 'id_ID',
+    siteName: 'KerjaTools'
   }
 };
 
