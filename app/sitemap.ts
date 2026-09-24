@@ -1,14 +1,15 @@
 import type { MetadataRoute } from 'next';
 import { SITE_URL } from '@/lib/site';
 import { thrGuides } from '@/lib/thrGuides';
+import { tools } from '@/lib/tools';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const core = [
     { path: '', priority: 1 },
-    { path: '/kalkulator-thr', priority: 0.95 },
-    { path: '/kalkulator-kenaikan-gaji', priority: 0.85 },
-    { path: '/kalkulator-gaji-bersih', priority: 0.85 },
-    { path: '/panduan', priority: 0.8 }
+    ...tools.map((tool) => ({ path: tool.href, priority: tool.href === '/kalkulator-thr' ? 0.95 : 0.85 })),
+    { path: '/panduan', priority: 0.8 },
+    { path: '/tentang', priority: 0.65 },
+    { path: '/metodologi', priority: 0.65 }
   ];
 
   const guides = thrGuides.map(({ slug }) => ({
