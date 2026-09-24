@@ -4,7 +4,7 @@ export type ToolItem = {
   title: string;
   desc: string;
   keywords: string[];
-  category: 'Gaji' | 'THR' | 'Waktu Kerja' | 'PHK' | 'Karier';
+  category: 'Gaji' | 'THR' | 'Waktu Kerja' | 'PHK' | 'Karier' | 'Cuti';
 };
 
 export const tools: ToolItem[] = [
@@ -65,11 +65,35 @@ export const tools: ToolItem[] = [
     category: 'Gaji'
   },
   {
+    href: '/kalkulator-bonus',
+    icon: '💰',
+    title: 'Kalkulator Bonus',
+    desc: 'Simulasi bonus berdasarkan persentase atau kelipatan gaji.',
+    keywords: ['bonus', 'bonus karyawan', 'insentif', 'profit sharing'],
+    category: 'Gaji'
+  },
+  {
+    href: '/kalkulator-sisa-cuti',
+    icon: '🏖️',
+    title: 'Kalkulator Sisa Cuti',
+    desc: 'Hitung saldo cuti dari hak, carry-over, pemakaian, dan rencana cuti.',
+    keywords: ['cuti', 'sisa cuti', 'saldo cuti', 'annual leave'],
+    category: 'Cuti'
+  },
+  {
     href: '/generator-surat-resign',
     icon: '✉️',
     title: 'Generator Surat Resign',
     desc: 'Buat draft surat pengunduran diri profesional secara instan.',
     keywords: ['resign', 'pengunduran diri', 'surat resign', 'career'],
     category: 'Karier'
+  },
+  {
+    href: '/generator-email-cuti',
+    icon: '📩',
+    title: 'Generator Email Cuti',
+    desc: 'Buat draft email pengajuan cuti yang singkat dan profesional.',
+    keywords: ['email cuti', 'pengajuan cuti', 'annual leave', 'izin cuti'],
+    category: 'Cuti'
   }
 ];
