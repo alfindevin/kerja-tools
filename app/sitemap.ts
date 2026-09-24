@@ -5,7 +5,9 @@ import { tools } from '@/lib/tools';
 
 const extraGuidePaths = [
   '/panduan/cara-menghitung-lembur',
-  '/panduan/cara-menghitung-gaji-prorata'
+  '/panduan/cara-menghitung-gaji-prorata',
+  '/panduan/cara-menghitung-pesangon',
+  '/panduan/komponen-pesangon-upmk-penggantian-hak'
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
