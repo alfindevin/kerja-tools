@@ -3,6 +3,11 @@ import { SITE_URL } from '@/lib/site';
 import { thrGuides } from '@/lib/thrGuides';
 import { tools } from '@/lib/tools';
 
+const extraGuidePaths = [
+  '/panduan/cara-menghitung-lembur',
+  '/panduan/cara-menghitung-gaji-prorata'
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const core = [
     { path: '', priority: 1 },
@@ -12,10 +17,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/metodologi', priority: 0.65 }
   ];
 
-  const guides = thrGuides.map(({ slug }) => ({
-    path: `/panduan/${slug}`,
-    priority: 0.75
-  }));
+  const guides = [
+    ...thrGuides.map(({ slug }) => ({
+      path: `/panduan/${slug}`,
+      priority: 0.75
+    })),
+    ...extraGuidePaths.map((path) => ({ path, priority: 0.75 }))
+  ];
 
   return [...core, ...guides].map(({ path, priority }) => ({
     url: `${SITE_URL}${path}`,
