@@ -38,13 +38,13 @@ export default function Page() {
 
         <article className="content seo-content">
           <h2>Berapa hak cuti tahunan minimum?</h2>
-          <p>Ketentuan umum menetapkan cuti tahunan paling sedikit 12 hari kerja setelah pekerja bekerja selama 12 bulan secara terus-menerus.</p>
+          <p>Pasal 79 dalam UU No. 6 Tahun 2023 menetapkan cuti tahunan paling sedikit 12 hari kerja setelah pekerja bekerja selama 12 bulan secara terus-menerus.</p>
 
           <h2>Apakah sisa cuti bisa dibawa ke tahun berikutnya?</h2>
           <p>Pelaksanaan cuti tahunan diatur dalam perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama. Karena itu fitur carry-over di kalkulator ini dibuat sebagai input manual.</p>
 
           <h2>Sumber resmi</h2>
-          <p><a className="tag" href="https://jdih.kemnaker.go.id/asset/data_puu/2020uuciptaker11.pdf" target="_blank" rel="noreferrer">Ketentuan Pasal 79 — JDIH Kemnaker ↗</a></p>
+          <p><a className="tag" href="https://peraturan.bpk.go.id/Details/246523/uu-no-6-tahun-2023" target="_blank" rel="noreferrer">UU No. 6 Tahun 2023 — JDIH BPK ↗</a></p>
           <p className="disclaimer">Saldo resmi tetap mengikuti catatan HR dan aturan perusahaan. KerjaTools hanya membantu menghitung berdasarkan angka yang kamu masukkan.</p>
         </article>
       </div>
