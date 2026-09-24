@@ -7,6 +7,7 @@ export default function SiteNav() {
         <Link className="brand" href="/">Kerja<span>Tools</span></Link>
         <div className="nav-links">
           <Link href="/#tools">Kalkulator</Link>
+          <Link href="/panduan">Panduan</Link>
           <Link href="/#tentang">Tentang</Link>
         </div>
       </div>
