@@ -8,7 +8,8 @@ export default function SiteNav() {
         <div className="nav-links">
           <Link href="/#tools">Kalkulator</Link>
           <Link href="/panduan">Panduan</Link>
-          <Link href="/#tentang">Tentang</Link>
+          <Link href="/tentang">Tentang</Link>
+          <Link href="/metodologi">Metodologi</Link>
         </div>
       </div>
     </nav>
