@@ -1,25 +1,21 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
+import ToolSearch from '@/components/ToolSearch';
 import { siteUrl } from '@/lib/site';
+import { tools } from '@/lib/tools';
 
 export const metadata: Metadata = {
   title: 'KerjaTools — Kalkulator & Tools Kerja Gratis',
-  description: 'Kalkulator THR, kenaikan gaji, gaji bersih, dan panduan kerja gratis untuk pekerja Indonesia.',
+  description: 'Kalkulator THR, lembur, prorata gaji, kenaikan gaji, gaji bersih, dan panduan kerja gratis untuk pekerja Indonesia.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'KerjaTools — Kalkulator & Tools Kerja Gratis',
-    description: 'Tools praktis untuk membantu urusan kerja, gaji, dan THR.',
+    description: 'Tools praktis untuk membantu urusan kerja, gaji, THR, lembur, dan prorata.',
     url: '/',
     type: 'website'
   }
 };
-
-const tools = [
-  { href: '/kalkulator-thr', icon: '🎁', title: 'Kalkulator THR', desc: 'Estimasi THR berdasarkan masa kerja dan upah bulanan.' },
-  { href: '/kalkulator-kenaikan-gaji', icon: '📈', title: 'Kenaikan Gaji', desc: 'Lihat nominal kenaikan, persentase, dan gaji baru dalam hitungan detik.' },
-  { href: '/kalkulator-gaji-bersih', icon: '💸', title: 'Gaji Bersih', desc: 'Estimasi take-home pay dari gaji, tunjangan, dan potongan yang kamu masukkan.' }
-];
 
 const guides = [
   { href: '/panduan/thr-2026', title: 'THR 2026: aturan dan cara cek estimasi' },
@@ -32,6 +28,7 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'KerjaTools',
+    alternateName: ['Kerja Tools', 'KerjaTools Indonesia'],
     url: siteUrl(),
     description: 'Kalkulator dan panduan kerja gratis untuk pekerja Indonesia.',
     inLanguage: 'id-ID'
@@ -44,18 +41,25 @@ export default function Home() {
         <div className="container">
           <span className="eyebrow">Gratis • Cepat • Tanpa login</span>
           <h1>Urusan kerja, jadi lebih gampang.</h1>
-          <p>KerjaTools membantu pekerja Indonesia menghitung THR, kenaikan gaji, take-home pay, dan memahami urusan kerja sehari-hari.</p>
-          <div className="searchbox"><span>⌕</span><input aria-label="Cari tool" placeholder="Cari: THR, gaji, resign, cuti..." disabled /></div>
+          <p>KerjaTools membantu pekerja Indonesia menghitung THR, lembur, prorata gaji, kenaikan gaji, take-home pay, dan memahami urusan kerja sehari-hari.</p>
+          <ToolSearch />
         </div>
       </section>
 
       <section className="section" id="tools">
         <div className="container">
-          <h2>Mulai dari yang kamu butuhkan</h2>
+          <div className="section-heading-row">
+            <div>
+              <span className="mini-label">Utility hub</span>
+              <h2>Pilih tool yang kamu butuhkan</h2>
+            </div>
+            <span className="tool-count">{tools.length} tools gratis</span>
+          </div>
           <div className="grid">
             {tools.map((tool) => (
               <Link className="card" href={tool.href} key={tool.href}>
                 <div className="icon">{tool.icon}</div>
+                <span className="mini-label card-category">{tool.category}</span>
                 <h3>{tool.title}</h3>
                 <p>{tool.desc}</p>
                 <span className="tag">Buka tool →</span>
@@ -89,8 +93,13 @@ export default function Home() {
 
       <section className="section" id="tentang">
         <div className="container content">
-          <h2>Satu tempat untuk tool kerja sehari-hari</h2>
-          <p>KerjaTools menggabungkan kalkulator dan panduan yang saling terhubung, supaya kamu bisa memahami konteksnya lalu langsung menghitung tanpa pindah-pindah situs.</p>
+          <span className="mini-label">Transparan</span>
+          <h2>Bukan sekadar angka.</h2>
+          <p>KerjaTools menjelaskan asumsi dan sumber yang dipakai. Tool yang terkait regulasi dilengkapi rujukan resmi, sementara kalkulator yang bersifat matematis menjelaskan batasannya.</p>
+          <div className="text-links">
+            <Link href="/tentang">Tentang KerjaTools →</Link>
+            <Link href="/metodologi">Metodologi & sumber →</Link>
+          </div>
         </div>
       </section>
     </main>
