@@ -29,7 +29,7 @@ export default function Page() {
           <div className="article-content">
             <section>
               <h2>Uang pesangon</h2>
-              <p>Uang pesangon memiliki tabel dasar berdasarkan masa kerja. Nilai dasar ini kemudian perlu dibaca bersama ketentuan alasan PHK yang berlaku.</p>
+              <p>PP No. 35 Tahun 2021 memuat tabel pesangon berdasarkan masa kerja. Penerapan akhirnya perlu dibaca bersama alasan PHK serta hukum dan putusan pengadilan yang berlaku.</p>
             </section>
 
             <section>
@@ -43,8 +43,8 @@ export default function Page() {
             </section>
 
             <section>
-              <h2>Kenapa hasil akhir bisa berbeda?</h2>
-              <p>Alasan PHK, dasar upah, isi perjanjian kerja, peraturan perusahaan, PKB, serta komponen hak yang masih tersisa dapat membuat nilai akhir berbeda antarpekerja.</p>
+              <h2>Konteks hukum terkini</h2>
+              <p>Putusan MK No. 168/PUU-XXI/2023 mengubah pemaknaan beberapa ketentuan UU No. 6 Tahun 2023. Untuk kasus PHK aktual, nilai simulasi perlu diverifikasi terhadap dasar PHK dan perkembangan hukum terkini.</p>
             </section>
 
             <section className="inline-cta">
@@ -54,7 +54,10 @@ export default function Page() {
 
             <section>
               <h2>Sumber resmi</h2>
-              <p><a href="https://jdih.kemnaker.go.id/peraturan/detail/1723/peraturan-pemerintah-nomor-35-tahun-2021" target="_blank" rel="noreferrer">PP No. 35 Tahun 2021 — JDIH Kemnaker ↗</a></p>
+              <div className="source-links">
+                <a href="https://jdih.kemnaker.go.id/peraturan/detail/1723/peraturan-pemerintah-nomor-35-tahun-2021" target="_blank" rel="noreferrer">PP No. 35 Tahun 2021 ↗</a>
+                <a href="https://peraturan.bpk.go.id/Details/246523/uu-no-6-tahun-2023" target="_blank" rel="noreferrer">UU No. 6 Tahun 2023 & putusan terkait ↗</a>
+              </div>
             </section>
           </div>
         </article>
