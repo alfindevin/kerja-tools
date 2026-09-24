@@ -4,12 +4,24 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { thrGuides } from '@/lib/thrGuides';
 
 export const metadata: Metadata = {
-  title: 'Panduan Kerja, Gaji, THR & Lembur',
-  description: 'Kumpulan panduan praktis seputar THR, gaji, lembur, prorata, dan kebutuhan kerja untuk pekerja Indonesia.',
+  title: 'Panduan Kerja, Gaji, THR, Lembur & PHK',
+  description: 'Kumpulan panduan praktis seputar THR, gaji, lembur, prorata, pesangon, dan kebutuhan kerja untuk pekerja Indonesia.',
   alternates: { canonical: '/panduan' }
 };
 
 const extraGuides = [
+  {
+    href: '/panduan/cara-menghitung-pesangon',
+    eyebrow: 'Panduan PHK',
+    title: 'Cara Menghitung Pesangon 2026',
+    description: 'Cara membaca tabel uang pesangon, UPMK, dan faktor alasan PHK.'
+  },
+  {
+    href: '/panduan/komponen-pesangon-upmk-penggantian-hak',
+    eyebrow: 'Panduan PHK',
+    title: 'Pesangon, UPMK & Penggantian Hak',
+    description: 'Pahami perbedaan komponen utama dalam perhitungan PHK.'
+  },
   {
     href: '/panduan/cara-menghitung-lembur',
     eyebrow: 'Panduan lembur',
@@ -56,8 +68,8 @@ export default function PanduanPage() {
         </section>
 
         <div className="content cta-box">
-          <h2>Mau langsung menghitung?</h2>
-          <p>KerjaTools sekarang punya kalkulator THR, lembur, prorata, pesangon, gaji harian/jam, dan tool kerja lainnya.</p>
+          <h2>Mau langsung mencoba?</h2>
+          <p>KerjaTools sekarang punya kalkulator dan generator untuk THR, lembur, prorata, pesangon, bonus, cuti, gaji, resign, dan kebutuhan kerja lainnya.</p>
           <Link className="primary-link" href="/#tools">Lihat semua tool →</Link>
         </div>
       </div>
