@@ -4,7 +4,7 @@ export type ToolItem = {
   title: string;
   desc: string;
   keywords: string[];
-  category: 'Gaji' | 'THR' | 'Waktu Kerja' | 'PHK' | 'Karier' | 'Cuti';
+  category: 'Gaji' | 'THR' | 'Waktu Kerja' | 'PHK' | 'Karier' | 'Cuti' | 'Pajak';
 };
 
 export const tools: ToolItem[] = [
@@ -81,6 +81,14 @@ export const tools: ToolItem[] = [
     category: 'Cuti'
   },
   {
+    href: '/kalkulator-pajak-gaji',
+    icon: '🧮',
+    title: 'Kalkulator Pajak Gaji',
+    desc: 'Estimasi PPh tahunan sederhana dari penghasilan neto dan PTKP.',
+    keywords: ['pajak gaji', 'pph 21', 'ptkp', 'pajak tahunan', 'pkp'],
+    category: 'Pajak'
+  },
+  {
     href: '/generator-surat-resign',
     icon: '✉️',
     title: 'Generator Surat Resign',
@@ -95,5 +103,21 @@ export const tools: ToolItem[] = [
     desc: 'Buat draft email pengajuan cuti yang singkat dan profesional.',
     keywords: ['email cuti', 'pengajuan cuti', 'annual leave', 'izin cuti'],
     category: 'Cuti'
+  },
+  {
+    href: '/generator-negosiasi-gaji',
+    icon: '🤝',
+    title: 'Generator Negosiasi Gaji',
+    desc: 'Buat draft email penyesuaian gaji berdasarkan kontribusi dan target.',
+    keywords: ['negosiasi gaji', 'kenaikan gaji', 'salary negotiation', 'email hr'],
+    category: 'Karier'
+  },
+  {
+    href: '/generator-surat-pengalaman-kerja',
+    icon: '📄',
+    title: 'Surat Pengalaman Kerja',
+    desc: 'Buat draft surat pengalaman kerja untuk disesuaikan perusahaan.',
+    keywords: ['surat pengalaman kerja', 'paklaring', 'experience letter', 'hr'],
+    category: 'Karier'
   }
 ];
