@@ -4,7 +4,7 @@ export type ToolItem = {
   title: string;
   desc: string;
   keywords: string[];
-  category: 'Gaji' | 'THR' | 'Waktu Kerja';
+  category: 'Gaji' | 'THR' | 'Waktu Kerja' | 'PHK' | 'Karier';
 };
 
 export const tools: ToolItem[] = [
@@ -47,5 +47,29 @@ export const tools: ToolItem[] = [
     desc: 'Estimasi gaji proporsional berdasarkan hari kerja.',
     keywords: ['prorata', 'gaji prorata', 'hari kerja', 'join tengah bulan'],
     category: 'Gaji'
+  },
+  {
+    href: '/kalkulator-pesangon',
+    icon: '🧾',
+    title: 'Kalkulator Pesangon',
+    desc: 'Estimasi komponen pesangon dan UPMK berdasarkan masa kerja.',
+    keywords: ['pesangon', 'phk', 'upmk', 'masa kerja', 'severance'],
+    category: 'PHK'
+  },
+  {
+    href: '/kalkulator-gaji-harian-jam',
+    icon: '🕒',
+    title: 'Gaji per Hari & Jam',
+    desc: 'Konversi upah bulanan ke harian, per jam paruh waktu, dan dasar lembur.',
+    keywords: ['gaji harian', 'gaji per jam', 'upah harian', '126', '173'],
+    category: 'Gaji'
+  },
+  {
+    href: '/generator-surat-resign',
+    icon: '✉️',
+    title: 'Generator Surat Resign',
+    desc: 'Buat draft surat pengunduran diri profesional secara instan.',
+    keywords: ['resign', 'pengunduran diri', 'surat resign', 'career'],
+    category: 'Karier'
   }
 ];
