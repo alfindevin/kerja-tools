@@ -7,7 +7,9 @@ const extraGuidePaths = [
   '/panduan/cara-menghitung-lembur',
   '/panduan/cara-menghitung-gaji-prorata',
   '/panduan/cara-menghitung-pesangon',
-  '/panduan/komponen-pesangon-upmk-penggantian-hak'
+  '/panduan/komponen-pesangon-upmk-penggantian-hak',
+  '/panduan/cuti-tahunan-karyawan',
+  '/panduan/cara-menghitung-bonus-karyawan'
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
