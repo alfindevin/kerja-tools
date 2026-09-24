@@ -40,7 +40,8 @@ export default function Page() {
           <h2>Apa yang sebaiknya ada di email cuti?</h2>
           <p>Sampaikan tanggal cuti, informasi handover yang relevan, dan permintaan konfirmasi. Alasan pribadi tidak harus dijelaskan secara berlebihan jika tidak diperlukan.</p>
           <h2>Periksa aturan perusahaan</h2>
-          <p>Pelaksanaan cuti tahunan diatur melalui perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama. Pastikan pengajuanmu mengikuti alur persetujuan perusahaan.</p>
+          <p>UU No. 6 Tahun 2023 menetapkan hak cuti tahunan minimum, sementara pelaksanaannya diatur melalui perjanjian kerja, peraturan perusahaan, atau perjanjian kerja bersama. Pastikan pengajuanmu mengikuti alur persetujuan perusahaan.</p>
+          <p><a className="tag" href="https://peraturan.bpk.go.id/Details/246523/uu-no-6-tahun-2023" target="_blank" rel="noreferrer">Lihat UU No. 6 Tahun 2023 ↗</a></p>
           <p className="disclaimer">Generator ini membantu penulisan email, bukan menjamin persetujuan cuti.</p>
         </article>
       </div>
