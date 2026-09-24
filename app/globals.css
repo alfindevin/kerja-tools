@@ -161,3 +161,7 @@ textarea:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(47,111,7
   .generator-grid { grid-template-columns: 1fr; }
   .letter-card-head { align-items: flex-start; flex-direction: column; }
 }
+
+
+.email-preview-subject { border: 1px solid #ece6d8; border-bottom: 0; border-radius: 16px 16px 0 0; padding: 14px 18px; background: #fffdf8; color: #48524b; font-size: .92rem; }
+.email-preview { border-radius: 0 0 16px 16px; min-height: 430px; }
