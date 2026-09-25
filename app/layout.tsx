@@ -3,6 +3,7 @@ import './globals.css';
 import SiteNav from '@/components/SiteNav';
 import SiteFooter from '@/components/SiteFooter';
 import { SITE_URL } from '@/lib/site';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -21,7 +22,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="id">
-      <body><SiteNav />{children}<SiteFooter /></body>
+      <body>
+        <SiteNav />
+        {children}
+        <SiteFooter />
+        <Analytics />
+      </body>
     </html>
   );
 }
