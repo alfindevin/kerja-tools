@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node -e \"const fs=require('fs');fs.mkdirSync('public',{recursive:true});fs.copyFileSync('package-lock.json','public/generated-lock.json')\"",
     "build": "next build",
     "start": "next start"
   },
@@ -13,9 +14,12 @@
     "react-dom": "19.1.8"
   },
   "devDependencies": {
-    "@types/node": "^22.10.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "typescript": "^5.7.2"
+    "@types/node": "22.10.0",
+    "@types/react": "19.0.0",
+    "@types/react-dom": "19.0.0",
+    "typescript": "5.7.2"
+  },
+  "engines": {
+    "node": "24.x"
   }
 }
